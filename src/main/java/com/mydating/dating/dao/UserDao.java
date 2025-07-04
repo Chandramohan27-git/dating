@@ -35,4 +35,13 @@ public class UserDao {
 		// TODO Auto-generated method stub
 		return ur.findById(id);
 	}
+
+	public List<User> searchByName(String letters) {
+		return ur.searchByName(letters);
+	}
+
+	public List<User> searchByEmail(String letters) {
+		// TODO Auto-generated method stub
+		return ur.searchByEmail(letters);
+	}
 }

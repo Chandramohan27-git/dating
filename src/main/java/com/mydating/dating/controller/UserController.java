@@ -33,7 +33,13 @@ public class UserController {
 		return us.findBestMatch(id,top);
 		
 	}
-	
-	
+	@GetMapping("/users/search/name/{letters}")
+	public ResponseEntity<?> searchByName(@PathVariable String letters){
+		return us.searchByName(letters);
+	}
+	@GetMapping("/users/search/email/{letters}")
+	public ResponseEntity<?> searchByEmail(@PathVariable String letters){
+		return us.searchByEmail(letters);
+	}
 }
 
